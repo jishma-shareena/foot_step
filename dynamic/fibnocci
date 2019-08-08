@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main(){
+    int fib(int n)
+    {
+        if(n==1)
+	    {
+	        return 1;
+	    }
+	    else
+	    {
+	        return fib(n-1)*n;
+	    }
+    };
+	int t,n,res;
+	scanf("%d", &t);              			// Reading input from STDIN
+	while(t>0)
+	{
+	    scanf("%d",&n);
+        res=fib(n);
+        printf("%d\n",res);
+	    t--;  
+	}
+}
