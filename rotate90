@@ -1,0 +1,35 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int r,c,i,j;
+	cin>>r>>c;
+	int a[r][c],b[c][r];
+	for(i=0;i<r;i++){
+		for(j=0;j<c;j++){
+			cin>>a[i][j];
+			//cout<<a[i][j];
+		}
+	}
+	int t=0,u=0;
+	int l;
+	for(j=0;j<c;j++){
+		for(i=r-1;i>=0;i--){
+			b[t][u]=a[i][j];
+			//cout<<<<" ";
+			u++;
+		}
+		l=u;
+		u=0;
+		cout<<endl;
+		t++;
+	}
+	for(i=0;i<t;i++){
+		for(j=0;j<l;j++){
+			cout<<b[i][j]<<" ";
+			//cout<<a[i][j];
+		}
+		cout<<endl;
+	}
+	
+	
+}
