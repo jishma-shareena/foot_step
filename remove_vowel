@@ -1,0 +1,29 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+int main(){
+	string a,b;
+	b="aeiou";
+	cin>>a;
+	//cout<<b;
+	int l,i,j,f=0,m=0;
+	l=a.length();
+	char res[l];
+	//cout<<a[2];
+	for(i=0;i<l;i++){
+		for(j=0;j<5;j++){
+			if(a[i]==b[j]){
+				f=1;
+			}
+			
+			}
+			if(f==0){
+				res[m]=a[i];
+				m++;
+		}
+		f=0;
+	}
+	for(i=0;res[i]!=NULL;i++){
+		cout<<res[i];
+	}
+}
